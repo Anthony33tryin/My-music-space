@@ -1,0 +1,158 @@
+/* 重新设置 body 样式，确保内容有足够的空间 */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #fefefe; /* 背景色 */
+  color: #333;
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column; /* 垂直布局 */
+  justify-content: flex-start; /* 上对齐 */
+  align-items: center; /* 水平居中 */
+  min-height: 100vh; /* 确保页面填充整个屏幕 */
+}
+
+/* 设置标题的样式，确保其独立显示 */
+h1 {
+  text-align: center;
+  margin-bottom: 30px; /* 让标题和内容之间有一定距离 */
+}
+
+/* 音乐列表容器 */
+.music-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* 响应式网格布局 */
+  gap: 16px;
+  padding: 20px;
+  width: 100%; /* 容器宽度自适应 */
+}
+
+/* 音乐项样式 */
+.music-item {
+  background-color: #f0f0f0;
+  padding: 16px;
+  border-radius: 12px;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.5s forwards;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* 增加阴影 */
+}
+
+/* 图片样式 */
+.music-item img {
+  border-radius: 8px;
+  max-width: 100%;
+  height: auto;
+}
+
+.music-item img:hover {
+  transform: scale(1.05); /* 图片放大 */
+  transition: transform 0.3s ease; /* 平滑过渡 */
+}
+
+/* 音乐项标题 */
+.music-item h3 {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+/* 音乐项描述 */
+.music-item p {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+/* 链接样式 - 合并两部分样式 */
+.music-item a {
+  display: block; /* 使按钮成为块级元素 */
+  width: 100%; /* 让按钮宽度填满父容器 */
+  text-align: center; /* 文字居中对齐 */
+  margin-top: 10px; /* 与上方内容保持间距 */
+  padding: 12px 16px; /* 调整按钮内边距 */
+  background-color: #1db954; /* Spotify绿色 */
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  box-sizing: border-box; /* 确保宽度和内边距不冲突 */
+}
+
+.music-item a:hover {
+  background-color: #1ed760;
+  transform: scale(1.1); /* 按钮轻微放大 */
+  transition: transform 0.3s ease;
+}
+
+/* 动画效果 */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}body {
+  font-family: 'Arial', sans-serif;
+  background-color: #fefefe;
+  color: #333;
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 100vh;
+  line-height: 1.6; /* 调整行高，统一中文和英文的行距 */
+}
+
+/* 设置标题的样式 */
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  line-height: 1.2; /* 适当设置标题的行高 */
+}
+
+/* 音乐项标题 */
+.music-item h3 {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.4; /* 统一设置标题的行高 */
+}
+
+/* 音乐项描述 */
+.music-item p {
+  font-size: 0.9rem;
+  color: #777;
+  line-height: 1.5; /* 统一描述的行高 */
+}
+
+/* 音乐项中的歌词样式 */
+.music-item .lyrics {
+  font-style: italic; /* 设置斜体 */
+  color: #555; /* 设置字体颜色 */
+  font-size: 1rem; /* 设置字体大小 */
+  margin-top: 10px; /* 给歌词段落添加间距 */
+  padding: 10px;
+  background-color: #f9f9f9; /* 背景色 */
+  border-radius: 8px; /* 圆角效果 */
+  line-height: 1.4; /* 调整行高 */
+}
+
+/* 鼠标悬停时歌词的背景变化 */
+.music-item .lyrics:hover {
+  background-color: #f0f0f0;
+}
+
+/* 允许自动换行并保持文本中的换行符 */
+.music-item .lyrics {
+  font-style: italic;
+  color: #555;
+  font-size: 1rem;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  line-height: 1.4;
+  white-space: pre-line; /* 自动处理换行符 */
+}
